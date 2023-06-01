@@ -32,8 +32,6 @@ public class User {
 		return pharmacy;
 	}
 	
-	  @OneToOne
-	  private Favorite favorite;
 	  
 	  
 	public void setPharmacy(Pharmacie pharmacy) {
@@ -83,13 +81,6 @@ public class User {
 		this.role = role;
 	}
 
-	public Favorite getFavorite() {
-		return favorite;
-	}
-
-	public void setFavorite(Favorite favorite) {
-		this.favorite = favorite;
-	}
 
 
 	

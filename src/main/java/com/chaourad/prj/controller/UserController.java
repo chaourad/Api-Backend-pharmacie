@@ -19,10 +19,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.chaourad.prj.entites.Favorite;
+
 import com.chaourad.prj.entites.Pharmacie;
 import com.chaourad.prj.entites.User;
-import com.chaourad.prj.repository.FavoriteRepository;
+
 import com.chaourad.prj.repository.UserRepository;
 import com.chaourad.prj.service.UserService;
 @RestController
@@ -86,23 +86,6 @@ public class UserController {
 
 
 
-	 @GetMapping("/{userId}/favorites")
-	 public ResponseEntity<List<Pharmacie>> getFavorites(@PathVariable int userId) {
-	     User user = userRepository.findById(userId);
-	     if (user == null) {
-	         return ResponseEntity.notFound().build();
-	     }
-
-	     Favorite favorite = user.getFavorite();
-	     if (favorite != null) {
-	         List<Pharmacie> pharmacies = favorite.getPharmacies();
-	         if (pharmacies != null) {
-	             return ResponseEntity.ok(pharmacies);
-	         }
-	     }
-
-	     return ResponseEntity.ok(Collections.emptyList());
-	 }
-
+	
 	 
 }

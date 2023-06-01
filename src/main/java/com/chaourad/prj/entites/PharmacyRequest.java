@@ -17,6 +17,7 @@ public class PharmacyRequest {
     private String adresse;
     private double laltitude;
     private double longitude;
+    private String image;
 
     @ManyToOne
     private Zone zone;
@@ -33,7 +34,15 @@ public class PharmacyRequest {
         return id;
     }
 
-    public void setId(Long id) {
+    public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public void setId(Long id) {
         this.id = id;
     }
 

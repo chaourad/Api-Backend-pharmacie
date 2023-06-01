@@ -23,6 +23,7 @@ public class Pharmacie {
     private String adresse;
     private double laltitude;
     private double longitude;
+    private String image;
     @JsonIgnore
     @OneToOne(mappedBy = "pharmacy")
     private User user;
@@ -31,7 +32,15 @@ public class Pharmacie {
 	private List<PharmacieGarde > pharmacieGarde;
 
 
-    @ManyToOne
+    public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	@ManyToOne
     private Zone zone;
 
     // Constructeurs, getters, setters, etc.

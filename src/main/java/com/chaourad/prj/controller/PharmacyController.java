@@ -32,7 +32,6 @@ public class PharmacyController {
         List<Pharmacie> pharmacies = pharmacyRepository.findByZoneId(zoneId);
         return ResponseEntity.ok(pharmacies);
     }
-
-
+   
     // Autres méthodes du contrôleur pour les opérations CRUD sur les pharmacies
 }
