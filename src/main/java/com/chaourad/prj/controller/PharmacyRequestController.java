@@ -98,6 +98,7 @@ public class PharmacyRequestController {
                 pharmacy.setLongitude(pharmacyRequest.getLongitude());
 		pharmacy.setImage(pharmacyRequest.getImage());
                 pharmacy.setZone(pharmacyRequest.getZone());
+		    
                 acceptedPharmacies.add(pharmacy);
             }
         }
