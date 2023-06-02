@@ -60,8 +60,10 @@ public class PharmacyRequestController {
         pharmacie.setAdresse(pharmacyRequest.getAdresse());
         pharmacie.setLaltitude(pharmacyRequest.getLaltitude());
         pharmacie.setLongitude(pharmacyRequest.getLongitude());
-        pharmacie.setZone(pharmacyRequest.getZone());
+	pharmacie.setImage(pharmacyRequest.getImage());
 
+        pharmacie.setZone(pharmacyRequest.getZone());
+	
         pharmacieRepository.save(pharmacie);
 
         // Mettre à jour le rôle de l'utilisateur et l'ID de pharmacie associé
