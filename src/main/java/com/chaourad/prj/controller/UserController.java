@@ -47,9 +47,19 @@ public class UserController {
 		userrepository.delete(s);
 	}
 
+	
 	@GetMapping("/all")
 	public List<User> findAll() {
-		return userrepository.findAll();
+		List<User> users = userrepository.findAll();
+		List<User> filtreusers = new ArrayList<>();
+
+		for (User user : users) {
+			if(!user.getRole().equals("admin")) {
+				filtreusers.add(user);
+			}
+			
+		}
+		return filtreusers;
 	}
 
 	@GetMapping(value = "/count")
